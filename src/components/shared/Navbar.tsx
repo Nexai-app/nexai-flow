@@ -1,39 +1,21 @@
+import "../../flow/config";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image"
 import { Box, Button, Container, Flex, Heading, List, ListItem, Spacer, Text, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, ButtonGroup } from "@chakra-ui/react";
 import "../../app/page.module.css"
+import {useAuth} from "@/contexts/AuthContext"
 
-//SET UP FLOW
-import * as fcl from "@onflow/fcl"
-// import * as t from "@onflow/types"
-
-
-// fcl.config({
-// 	"accessNode.api": "http://localhost:8080",
-// 	"discovery.wallet": "http://localhost:8781/fcl/authn" //dev wallet
-// })
 
 function Navbar() {
-
-	//FLOW
-	// const navigate = useNavigate();
 	const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-	const [add, setAdd] = useState({val:""})
 
-	useEffect(() => {
-		fcl.currentUser.subscribe(setAdd)
-	},[])
-
-	const Auth = () => {
-		fcl.authenticate()
-	}
+	const { logIn } = useAuth()
 
 
 	const handleDrawerToggle = () => {
 		setIsDrawerOpen(!isDrawerOpen);
 	};
-console.log("add",add)
 	return (
 		<Box className='App-header' mb={`80px`}>
 			<Flex as="nav" py='50px' px='80px' alignItems='center' gap='30px' bg='transparent'>
@@ -51,12 +33,12 @@ console.log("add",add)
 				<List display={{ base: "none", md: "flex" }}>
 					<ButtonGroup gap='2'>
 					<ListItem>
-							<Button onClick={Auth} colorScheme={`#341A41`}>
+							<Button onClick={logIn} colorScheme={`#341A41`}>
 								Sign In
 							</Button>
 					</ListItem>
 					<ListItem>
-							<Button onClick={Auth} border='1px' colorScheme={`transparent`}>
+							<Button onClick={logIn} border='1px' colorScheme={`transparent`}>
 								Try our Assistant
 							</Button>
 					</ListItem>
@@ -71,7 +53,7 @@ console.log("add",add)
 					<DrawerBody>
 						<List>
 							<ListItem>
-									<Button onClick={Auth} colorScheme="tranarent">
+									<Button onClick={logIn} colorScheme="tranarent">
 										Try our Assistant
 									</Button>
 							</ListItem>
