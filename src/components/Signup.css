@@ -1,0 +1,15 @@
+.ctb {
+	background-color:white;
+	width: 100%;
+	max-width: 100%;
+	color: #341A41;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 1.4rem;
+	cursor: pointer;
+}
+
+/* .cta:hover {
+	background-position: right;
+} */

@@ -1,0 +1,60 @@
+
+.App {
+	text-align: center;
+	color: white;
+}
+
+
+.steps {
+	/* background: linear-gradient(to top,
+			hsl(250, 24%, 9%) 70%,
+			hsl(286, 49%, 18%)); */
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-top: 0;
+}
+
+.steps h2 {
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: 2rem;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+	margin: 0 0 2rem 0;
+}
+
+.cta {
+	background: linear-gradient(to bottom right,
+			hsl(250, 24%, 9%),
+			hsl(286, 49%, 18%),
+			hsl(250, 24%, 9%));
+	background-size: 200%;
+	background-position: left;
+	transition: background-position 0.5s ease-in-out;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 1.8rem;
+	cursor: pointer;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cta:hover {
+	background-position: right;
+}
+
+.card-bg {
+	background-color: transparent;
+	border: 0;
+}
+
+.g-4 {
+	margin-bottom: 2rem;
+}
+
+.title {
+	font-size: 200;
+	font-weight: 800;
+}
