@@ -51,7 +51,7 @@ export const  AuthProvider = ({ children }:Props) => {
           return Profile.read(address)
         }
       `,
-      args: (arg, t) => [arg(currentUser.addr, t.Address)],
+      // args: (arg, t) => [arg(currentUser.addr, t.Address)],
     });
     setProfile(profile ?? null);
     setProfileExists(profile !== null);

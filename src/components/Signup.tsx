@@ -16,7 +16,7 @@ function SignUpForm() {
 
 
 
-	const handleSubmit = (e) => {
+	const handleSubmit = (e:any) => {
 		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 		e.preventDefault();
 		

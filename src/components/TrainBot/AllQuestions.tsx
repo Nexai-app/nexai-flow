@@ -12,6 +12,7 @@ import {
  import { AddIcon } from '@chakra-ui/icons'
 import { Box, Spinner } from "@chakra-ui/react";
 import Navbar from "../shared/Navbar2"
+import Link from "next/link";
 
 type ArrayT = {
     answer:string;
@@ -71,21 +72,21 @@ const AllQuestions = ()=>{
                         </CardBody>
                     </Card>
                     ))}
-                    <NavLink to="/train-bot">
+                    <Link href="/train-bot">
                     <Card  cursor="pointer" variant="outline" border="1px solid #FFFFFF" flexDirection="column" justifyContent="center" alignItems="center" h="280px" bgColor="white"  maxW='sm'>
                     <AddIcon boxSize={16} color="#341A41" bgColor="white"/>
                       <Text color="#341A41" fontSize="18px" bgColor="white">Add Question</Text>  
                     </Card>
-                    </NavLink>
+                    </Link>
                 </SimpleGrid>
                 </>
                  )}
 
                 </Box>
                 <Box m={8} display="flex" justifyContent="end">
-                    <NavLink to="/dashboard">
+                    <Link href="/dashboard">
                     <Button px={6} bgColor="white" color="#341A41" >Continue To Dashboard</Button>
-                    </NavLink>
+                    </Link>
                 </Box>
             </Box>
         </Box>
