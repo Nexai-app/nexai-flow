@@ -73,3 +73,15 @@ Looking ahead, Nexai has an exciting roadmap to further enhance its capabilities
 6. API integration: We will begin working on API integration to allow seamless integration of Nexai into other businesses' applications. This feature will enable businesses to leverage Nexai's customer support capabilities and enhance their own user experience.
 
 By pursuing these initiatives, Nexai aims to solidify its position as a leading customer service chatbot on the Flow blockchain. Through continuous development, integration of AI technologies, and strategic marketing efforts, we are confident that Nexai will provide a transformative solution for businesses and users in the blockchain ecosystem. Our ultimate goal is to simplify user interactions, enhance customer support, and drive widespread adoption of decentralized technologies.
+
+## Get Started
+
+---
+
+### notr: you should have flow cli installed and yarn installed
+
+---
+
+- flow emulator start
+- flow project deploy --network=emulator
+- yarn start or npm run start
