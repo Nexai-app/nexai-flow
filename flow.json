@@ -12,12 +12,27 @@
 		"emulator-account": {
 			"address": "f8d6e0586b0a20c7",
 			"key": "c834826f8b205c1cf078cc437d5d0e596ab241b1f69e06c9e16b62a923a94abc"
+		},
+		"testnet-account":{
+			"address": "0xcf8addd47c3bee2c",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_secp256k1",
+				"hashAlgorithm":"SHA3_256",
+				"privateKey": "cab21e5c75fb2c6534c62ceb3bc630bb52add1019d668442a5e45db473241390"
+			}
 		}
 	},
 	
 	"deployments": {
 		"emulator": {
 			"emulator-account":[
+				"Nexai"
+			]
+		},
+		"testnet": {
+			"testnet-account": [
 				"Nexai"
 			]
 		}
